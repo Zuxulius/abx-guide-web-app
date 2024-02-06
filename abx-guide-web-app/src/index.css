@@ -8,6 +8,8 @@ h2 {
   color: #1F4D83;
 }
 
+
+
 /* HEADER CSS */
 /* HEADER CSS */
 /* HEADER CSS */
@@ -39,4 +41,104 @@ footer {
   width: 100%;
   position: relative;
   bottom: 0;
+}
+
+/* GREEN BUTTON CSS */
+/* GREEN BUTTON CSS */
+/* GREEN BUTTON CSS */
+
+.green-button-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.green-button-div .green-button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1F4D83;
+  background-color: #DCEAFF;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  max-width: 100%;
+  height: 10vh;
+}
+
+.green-button-div .green-button:hover {
+  border: 3px solid lightblue;
+  padding: 7px;
+}
+
+/* RED BUTTON CSS */
+/* RED BUTTON CSS */
+/* RED BUTTON CSS */
+
+.red-button-div {
+  display: grid;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.red-button-div .red-button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1F4D83;
+  background-color: #DCEAFF;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  height: 20vh;
+  width: 100%;
+}
+
+.red-button-div .red-button:hover {
+  border: 3px solid hsl(0, 100%, 50%, 0.2);
+  padding: 7px;
+}
+
+/* QUICK RESOURCE BUTTON CSS */
+/* QUICK RESOURCE BUTTON CSS */
+/* QUICK RESOURCE BUTTON CSS */
+
+.quick-resources {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+
+.quick-resources .resource-button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #1F4D83;
+  background-color: hsl(241, 100%, 50%, 0.1);
+  border: none;
+  border-radius: 20px 0 30px 0;
+  height: 10vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.quick-resources .resource-button:hover {
+  border: 3px solid hsl(241, 100%, 50%, 0.2);
+  padding: 7px;
 }
