@@ -10,20 +10,20 @@ function Home() {
             <h2>Vanliga samhällsförvärvade infektioner</h2>
             <hr />
             <div className="green-button-div">
-                <Link className="green-button" to={""}>
+                <Link className="green-button" to={"/pdf-viewer"}>
                 Urosepsis / Pyelonefrit / Nedre afebril UVI
                 </Link>
-                <Link className="green-button" to={""}>
+                <Link className="green-button" to={"/pdf-viewer"}>
                 Pneumoni
                 </Link>
-                <Link className="green-button" to={""}>
+                <Link className="green-button" to={"/pdf-viewer"}>
                 Övriga
                 </Link>
             </div>
             <h2>Intensivvårdskrävande infektioner</h2>
             <hr />
             <div className="red-button-div">
-                <Link className="red-button" to={""}>
+                <Link className="red-button" to={"/pdf-viewer"}>
                 Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)
                 </Link>
             </div>
