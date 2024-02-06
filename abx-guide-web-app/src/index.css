@@ -1,5 +1,19 @@
-
 body {
   margin: 0;
   padding: 0;
+}
+
+/* HEADER CSS */
+/* HEADER CSS */
+/* HEADER CSS */
+
+header {
+  background: linear-gradient(to bottom, rgba(0, 102, 255, 1) 0%, rgba(36, 0, 255, 0.51) 100%);
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 10px;
 }
