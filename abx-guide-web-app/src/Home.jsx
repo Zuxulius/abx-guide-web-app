@@ -1,13 +1,42 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import { Link } from "react-router-dom"
 
 function Home() {
 
     return(
-        <>
+        <div className="homepage-container">
             <Header />
+            <h2>Vanliga samhällsförvärvade infektioner</h2>
+            <hr />
+            <div className="green-button-div">
+                <Link className="green-button" to={""}>
+                Urosepsis / Pyelonefrit / Nedre afebril UVI
+                </Link>
+                <Link className="green-button" to={""}>
+                Pneumoni
+                </Link>
+                <Link className="green-button" to={""}>
+                Övriga
+                </Link>
+            </div>
+            <h2>Intensivvårdskrävande infektioner</h2>
+            <hr />
+            <div className="red-button-div">
+                <Link className="red-button" to={""}>
+                Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)
+                </Link>
+            </div>
+            <h2>Snabbresurser</h2>
+            <hr />
+            <div className="quick-resources">
+                <button className="resource-button">Checklista</button>
+                <button className="resource-button">Penicillin-allergi</button>
+                <Link className="resource-button" to={""}>Källor och länkar</Link>
+                <Link className="resource-button" to={""}>Kontakt</Link>
+            </div>
             <Footer />
-        </>
+        </div>
     )
 }
 
