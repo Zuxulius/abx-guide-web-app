@@ -142,3 +142,52 @@ footer {
   border: 3px solid hsl(241, 100%, 50%, 0.2);
   padding: 7px;
 }
+
+/* PDF VIEWER CSS */
+/* PDF VIEWER CSS */
+/* PDF VIEWER CSS */
+
+.pdf__container__document {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjust the size of the pages */
+.react-pdf__Page {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.pdf-container {
+  background-color: #DCEAFF;
+ }
+
+ .pdf-toolbar {
+   position: fixed;
+   right: 0;
+   margin: 10px;
+   display: flex;
+   flex-direction: column;
+   z-index: 1000;
+  }
+
+ .pdf-toolbar button {
+   margin: 10px;
+   font-size: 2vw;
+   border-radius: 0.5vw;
+   border: none;
+   width: 3vw;
+   height: 3vw;
+   background: linear-gradient(to bottom, rgba(0, 102, 255, 1) 0%, rgba(36, 0, 255, 0.51) 100%);
+   cursor: pointer;
+ }
+
+ .pdf-toolbar button:hover {
+   opacity: 0.8;
+ }
