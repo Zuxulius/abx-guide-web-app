@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import Navbar from './Navbar';
+import Menu from './Menu';
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function PdfViewer({ pdf, pageNumber }) {
+function PdfViewer({ pdf, pageNumber, setPageNumber }) {
 
     const [file, setFile] = useState(pdf);
     const [numPages, setNumPages] = useState(null);
@@ -28,16 +30,18 @@ function PdfViewer({ pdf, pageNumber }) {
     // depend on zoomLevel to run when changed
     }, [zoomLevel]);
 
-    // When react-pdf successfully loads, set the page number
-    function onDocumentLoadSuccess({ numPages }) {
-         setNumPages(numPages);
-        // Wait for document to load, then scroll the page number into view.
+    useEffect(() => {
         setTimeout(() => {
             const pageElement = document.querySelector(`[data-page-number="${pageNumber}"]`)
             if (pageElement) {
             pageElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-        }, 500);
+        }, 300);
+    }, [pageNumber]);
+
+    // When react-pdf successfully loads, set the page number
+    function onDocumentLoadSuccess({ numPages }) {
+         setNumPages(numPages);
     }
 
     function zoomIn() {
@@ -52,6 +56,8 @@ function PdfViewer({ pdf, pageNumber }) {
 
     return (
         <div className="pdf-container">
+            <Navbar />
+            <Menu setPageNumber={setPageNumber}/>
             <div className="pdf-toolbar">
                 <button onClick={zoomOut}>-</button>
                 <button onClick={zoomIn}>+</button>

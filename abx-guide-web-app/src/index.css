@@ -191,3 +191,141 @@ footer {
  .pdf-toolbar button:hover {
    opacity: 0.8;
  }
+
+/* POPUPMENU CSS */
+/* POPUPMENU CSS */
+/* POPUPMENU CSS */
+
+.popup-menu {
+  overflow: auto;
+  display: flex;
+  background-color: whitesmoke;
+  z-index: 2000;
+  height: 100vh;
+  width: 25vw;
+  position: fixed;
+  flex-direction: column;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, rgba(0, 102, 255, 1) 0%, rgba(36, 0, 255, 0.51) 100%);
+  transition: transform 0.5s ease;
+  transform: translateX(-500px);
+}
+.popup-menu .navbar {
+  position: static;
+}
+
+.popup-menu .green-button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: #1F4D83;
+  background-color: #DCEAFF;
+  border: none;
+  border-radius: 10px;
+  max-width: 100%;
+  margin: 5px;
+  padding: 10px;
+}
+
+.popup-menu .green-button:hover {
+  border: 3px solid lightblue;
+  padding: 7px;
+}
+
+.popup-menu .red-button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: #1F4D83;
+  background-color: #DCEAFF;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  max-width: 100%;
+  margin: 5px;
+}
+
+.popup-menu .red-button:hover {
+  border: 3px solid hsl(0, 100%, 50%, 0.2);
+  padding: 7px;
+}
+
+.popup-menu .resource-button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 5px;
+  color: #1F4D83;
+  background-color: hsl(241, 100%, 50%, 0.1);
+  padding: 10px;
+  border: none;
+  border-radius: 20px 0 30px 0;
+}
+
+.popup-menu .resource-button:hover {
+  border: 3px solid hsl(241, 100%, 50%, 0.2);
+  padding: 7px;
+}
+
+/* NAVBAR CSS */
+/* NAVBAR CSS */
+/* NAVBAR CSS */
+
+.navbar {
+  position: fixed;
+  display: flex;
+  margin: 10px;
+  z-index: 1000;
+  gap: 5px;
+}
+
+.home {
+  background: linear-gradient(to bottom, rgba(0, 102, 255, 1) 0%, rgba(36, 0, 255, 0.51) 100%);
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  border-radius: 0.5vw;
+  border: none;
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+.menu {
+  background: linear-gradient(to bottom, rgba(0, 102, 255, 1) 0%, rgba(36, 0, 255, 0.51) 100%);
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  border-radius: 0.5vw;
+  border: none;
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+.home:hover, .menu:hover {
+  opacity: 0.8;
+}

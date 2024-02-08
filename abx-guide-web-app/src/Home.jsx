@@ -1,11 +1,15 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom"
+import Navbar from "./Navbar";
+import Menu from "./Menu";
 
 function Home({ setPageNumber }) {
 
     return(
         <div className="homepage-container">
+            <Navbar />
+            <Menu setPageNumber={setPageNumber}/>
             <Header />
             <h2>Vanliga samhällsförvärvade infektioner</h2>
             <hr />

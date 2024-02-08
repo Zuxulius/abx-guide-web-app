@@ -7,14 +7,14 @@ import { useState } from "react";
 
 function App() {
 
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(0);
 
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home setPageNumber={setPageNumber}/>} />
-        <Route path="/pdf-viewer-green" element={<PdfViewer pdf={greenCardPdf} pageNumber={pageNumber} />} />
-        <Route path="/pdf-viewer-red" element={<PdfViewer pdf={redCardPdf} pageNumber={pageNumber} />} />
+        <Route path="/pdf-viewer-green" element={<PdfViewer pdf={greenCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
+        <Route path="/pdf-viewer-red" element={<PdfViewer pdf={redCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
       </Routes>
     </Router>
   )
