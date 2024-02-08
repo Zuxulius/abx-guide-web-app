@@ -16,7 +16,7 @@ function DraggableAllergy() {
     <Rnd
       default={{
         x: window.innerWidth/2.5,
-        y: window.scrollY*1.1,
+        y: window.scrollY+100,
         width: window.innerWidth/2,
         height: window.innerHeight/2,
       }}
