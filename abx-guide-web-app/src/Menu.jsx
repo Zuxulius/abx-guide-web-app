@@ -34,8 +34,6 @@ function Menu({ setPageNumber }) {
             <button className="resource-button" onClick={toggleAllergyVisibility}>Penicillin-allergi</button>
             <Link to={"/about"} className="resource-button">Källor och länkar</Link>
             <Link to={"/about"} className="resource-button">Kontakt</Link>
-            {isChecklistVisible && <DraggableChecklist />}
-            {isAllergyVisible && <DraggableAllergy />}
         </div>
     )
 }
