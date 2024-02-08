@@ -3,7 +3,44 @@ import { Rnd } from 'react-rnd';
 function ChecklistContent() {
     return (
         <div>
-            <h2>CHECKLIST</h2>
+            <header><button>X</button></header>
+            <h3>Checklista vid insättande av antibiotika</h3>
+            <ol>
+                <li><b>Vid misstanke om livshotande infektion:  konsultera infektionsbakjour och narkosläkare</b></li>
+                <li>
+                    <b>Ställ preliminär diagnos</b>
+                    <ul>
+                        <li>Infektionsfokus?</li>
+                        <li>Sannolikt etiologiskt agens?</li>
+                        <li>Immunsuppression?</li>
+                        <li>Ange svårighetsgrad (NEWS)</li>
+                    </ul>
+                </li>
+                <li><b>Riskfaktorer antibiotikaresistenta bakterier?</b>
+                    <ul>
+                        <li>Tidigare odlingsfynd med antibiotikaresistenta bakterier (ABR) hos patient eller känt bärarskap av ABR hos hushållskontakt</li>
+                        <li>Utlandsresor</li>
+                        <li>Tidigare antibiotikabehandling</li>
+                        <li>Tidigare sjukhusvistelse/vårdkontakt</li>
+                    </ul>
+                </li>
+                <li><b>Provtagning</b>
+                    <ul>
+                        <li>Klinisk kemi: CRP, Blodstatus, Na, K, Kreatinin, eGFR kreatinin, eGFR cystatinC, Bilirubin (totalt + konjugerat), ALP, ALAT, ASAT, GT, LD, Albumin, Laktat, Glukos, Urinsticka, PCT, venös diff, PK, APTT, fibrinogen, D-dimer och blodgas. CK och Myoglobin (vid nekrotiserande hud och mjukdelsinfektion).</li>
+                        <li>Mikrobiologisk diagnostik: Odlingar: likvor blod, urin, sputum, NPH, sår, punktat (ledvätska, abscess).</li>
+                        <li>Övrig mikrobiologisk diagnostik:                                 - Pneumoni: PCR bakterier, PCR  virus (influensa, SARS-CoV-2, RS), Urinantigen (legionella/ pneumokock). Vid misstanke om ovanligare infektion (mögel, tuberkulos, psittakos, CMV, pneumocystis etc) kontakta infektionsläkare/mikrobiolog.</li>
+                    </ul>
+                </li>
+                <li><b>”Source Control”, föreligger behov av kirurgisk intervention – kontakta relevant kirurg!</b>
+                <br />OBS: utredning av infektionsfokus måste fortsätta om man inte lokaliserat infektionskällan!
+                </li>
+                <li><b>Ange tidpunkt för ny bedömning av fortsatt antibiotika alt. utsättning.</b>
+                <br />Motivera ditt val av antibiotika i journalen.
+                </li>
+                <li><b>När odlingssvar med resistensbesked erhållits skall riktad terapi ges.</b></li>
+                <li><b>Kontrollera alltid läkemedelsinteraktioner, att dosering baseras på aktuell njur- och leverfunktion samt vikt.</b></li>
+                <li><b>Pc-allergi - se tabell sid 5 för korsreaktivitet.</b></li>
+            </ol>
         </div>
     );
 };
@@ -15,17 +52,14 @@ function DraggableChecklist() {
       default={{
         x: window.innerWidth/3,
         y: window.innerHeight/1.5,
-        width: 320,
-        height: 200,
+        width: window.innerWidth/2,
+        height: window.innerHeight/2,
       }}
       minWidth={100}
       minHeight={100}
       bounds="window"
     >
       <div className="checklist-container">
-        <div className="drag-handle">
-          Drag from here
-        </div>
         <ChecklistContent />
       </div>
     </Rnd>

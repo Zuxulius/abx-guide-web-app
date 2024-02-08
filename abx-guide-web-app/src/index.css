@@ -338,13 +338,56 @@ footer {
 /* DRAGGABLE CSS (react-rnd) */
 
 .react-draggable {
+  border: 3px solid black;
+  border-radius: 1%;
   z-index: 10;
-  border: 5px solid green;
-  background-color: #DCEAFF;
-  overflow: hidden;
+  background-color: #F7F7FF;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.drag-handle {
-  z-index: 10;
-  border: 5px solid black;
+.checklist-container {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1F4D83;
+}
+
+.checklist-container button {
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.checklist-container header {
+  position: sticky;
+  top: 0;
+}
+
+.checklist-container h3{
+  text-align: center;
+}
+
+.checklist-container ol li{
+  margin-top: 10px;
+}
+
+.allergy-container {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1F4D83;
+}
+
+.allergy-container button {
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.allergy-container header {
+  position: sticky;
+  top: 0;
+}
+
+.allergy-container h3{
+  text-align: center;
 }
