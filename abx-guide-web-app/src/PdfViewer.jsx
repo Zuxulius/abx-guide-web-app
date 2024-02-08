@@ -38,8 +38,9 @@ function PdfViewer({ pdf, pageNumber, setPageNumber }) {
         setTimeout(() => {
             const pageElement = document.querySelector(`[data-page-number="${pageNumber}"]`)
             if (pageElement) {
-            pageElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            pageElement.scrollIntoView({ block: 'start' });
             }
+            setPageNumber(0);
         }, 300);
     }, [pageNumber]);
 

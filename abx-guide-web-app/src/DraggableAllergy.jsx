@@ -1,9 +1,11 @@
 import { Rnd } from 'react-rnd';
+import { useDraggable } from "./DraggableContext.jsx"
 
 function AllergyContent() {
+    const { toggleAllergyVisibility } = useDraggable();
     return (
         <div>
-            <header><button>X</button></header>
+            <header className='drag-handle'><button onClick={toggleAllergyVisibility}>X</button></header>
         </div>
     );
 };

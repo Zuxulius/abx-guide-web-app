@@ -32,7 +32,7 @@ function Home({ setPageNumber }) {
             <h2>Intensivvårdskrävande infektioner</h2>
             <hr />
             <div className="red-button-div">
-                <Link className="red-button" to={"pdf-viewer-red"} onClick={() => setPageNumber(0)}>
+                <Link className="red-button" to={"pdf-viewer-red"} onClick={() => setPageNumber(2)}>
                 Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)
                 </Link>
             </div>

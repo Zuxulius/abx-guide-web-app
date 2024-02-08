@@ -1,9 +1,11 @@
 import { Rnd } from 'react-rnd';
+import { useDraggable } from "./DraggableContext.jsx"
 
 function ChecklistContent() {
+    const { toggleChecklistVisibility } = useDraggable();
     return (
         <div>
-            <header><button>X</button></header>
+            <header className='drag-handle'><button onClick={toggleChecklistVisibility}>X</button></header>
             <h3>Checklista vid insättande av antibiotika</h3>
             <ol>
                 <li><b>Vid misstanke om livshotande infektion:  konsultera infektionsbakjour och narkosläkare</b></li>
@@ -58,6 +60,17 @@ function DraggableChecklist() {
       minWidth={100}
       minHeight={100}
       bounds="window"
+      enableResizing={{
+        top: true,
+        right: true,
+        bottom: true,
+        left: true,
+        topRight: true,
+        bottomRight: true,
+        bottomLeft: true,
+        topLeft: true,
+      }}
+      dragHandleClassName='drag-handle'
     >
       <div className="checklist-container">
         <ChecklistContent />
