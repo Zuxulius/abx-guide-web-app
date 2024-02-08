@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom"
 
-function Home() {
+function Home({ setPageNumber }) {
 
     return(
         <div className="homepage-container">
@@ -10,20 +10,20 @@ function Home() {
             <h2>Vanliga samhällsförvärvade infektioner</h2>
             <hr />
             <div className="green-button-div">
-                <Link className="green-button" to={"pdf-viewer-green"}>
+                <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(2)}>
                 Urosepsis / Pyelonefrit / Nedre afebril UVI
                 </Link>
-                <Link className="green-button" to={"pdf-viewer-green"}>
+                <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(3)}>
                 Pneumoni
                 </Link>
-                <Link className="green-button" to={"pdf-viewer-green"}>
+                <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(4)}>
                 Övriga
                 </Link>
             </div>
             <h2>Intensivvårdskrävande infektioner</h2>
             <hr />
             <div className="red-button-div">
-                <Link className="red-button" to={"pdf-viewer-red"}>
+                <Link className="red-button" to={"pdf-viewer-red"} onClick={() => setPageNumber(0)}>
                 Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)
                 </Link>
             </div>

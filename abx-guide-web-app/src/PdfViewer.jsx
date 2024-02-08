@@ -3,9 +3,10 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function PdfViewer({ pdf }) {
+function PdfViewer({ pdf, pageNumber }) {
 
     const [file, setFile] = useState(pdf);
     const [numPages, setNumPages] = useState(null);
@@ -18,7 +19,7 @@ function PdfViewer({ pdf }) {
 
     useEffect(() => {
         function handleResize() {
-            () => setPageWidth(window.innerWidth * 0.7 * zoomLevel); // Update width when resizing window
+            setPageWidth(window.innerWidth * 0.7 * zoomLevel); // Update width when resizing window
         }
         window.addEventListener('resize', handleResize);
 
@@ -29,7 +30,14 @@ function PdfViewer({ pdf }) {
 
     // When react-pdf successfully loads, set the page number
     function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
+         setNumPages(numPages);
+        // Wait for document to load, then scroll the page number into view.
+        setTimeout(() => {
+            const pageElement = document.querySelector(`[data-page-number="${pageNumber}"]`)
+            if (pageElement) {
+            pageElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 500);
     }
 
     function zoomIn() {
