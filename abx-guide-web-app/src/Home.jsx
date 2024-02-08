@@ -36,8 +36,8 @@ function Home({ setPageNumber }) {
             <div className="quick-resources">
                 <button className="resource-button">Checklista</button>
                 <button className="resource-button">Penicillin-allergi</button>
-                <Link className="resource-button" to={""}>Källor och länkar</Link>
-                <Link className="resource-button" to={""}>Kontakt</Link>
+                <Link className="resource-button" to={"about"}>Källor och länkar</Link>
+                <Link className="resource-button" to={"about"}>Kontakt</Link>
             </div>
             <Footer />
         </div>

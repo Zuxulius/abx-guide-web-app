@@ -4,6 +4,7 @@ import PdfViewer from "./PdfViewer";
 import greenCardPdf from "./assets/greenCard.pdf";
 import redCardPdf from "./assets/redCard.pdf";
 import { useState } from "react";
+import About from "./About";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home setPageNumber={setPageNumber}/>} />
         <Route path="/pdf-viewer-green" element={<PdfViewer pdf={greenCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
         <Route path="/pdf-viewer-red" element={<PdfViewer pdf={redCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   )

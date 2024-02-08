@@ -27,8 +27,8 @@ function Menu({ setPageNumber }) {
             <h3>Snabbresurser</h3>
             <button className="resource-button" >Checklista</button>
             <button className="resource-button" >Penicillin-allergi</button>
-            <Link to={""} className="resource-button">Källor och länkar</Link>
-            <Link to={""} className="resource-button">Kontakt</Link>
+            <Link to={"/about"} className="resource-button">Källor och länkar</Link>
+            <Link to={"/about"} className="resource-button">Kontakt</Link>
         </div>
     )
 }
