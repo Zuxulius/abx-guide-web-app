@@ -13,8 +13,6 @@ h3 {
   color: #1F4D83;
 }
 
-
-
 /* HEADER CSS */
 /* HEADER CSS */
 /* HEADER CSS */
@@ -333,4 +331,20 @@ footer {
 
 .home:hover, .menu:hover {
   opacity: 0.8;
+}
+
+/* DRAGGABLE CSS (react-rnd) */
+/* DRAGGABLE CSS (react-rnd) */
+/* DRAGGABLE CSS (react-rnd) */
+
+.react-draggable {
+  z-index: 10;
+  border: 5px solid green;
+  background-color: #DCEAFF;
+  overflow: hidden;
+}
+
+.drag-handle {
+  z-index: 10;
+  border: 5px solid black;
 }

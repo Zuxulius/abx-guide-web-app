@@ -5,20 +5,23 @@ import greenCardPdf from "./assets/greenCard.pdf";
 import redCardPdf from "./assets/redCard.pdf";
 import { useState } from "react";
 import About from "./About";
+import { DraggableProvider } from "./DraggableContext"
 
 function App() {
 
   const [pageNumber, setPageNumber] = useState(0);
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home setPageNumber={setPageNumber}/>} />
-        <Route path="/pdf-viewer-green" element={<PdfViewer pdf={greenCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
-        <Route path="/pdf-viewer-red" element={<PdfViewer pdf={redCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
+    <DraggableProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home setPageNumber={setPageNumber}/>} />
+          <Route path="/pdf-viewer-green" element={<PdfViewer pdf={greenCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
+          <Route path="/pdf-viewer-red" element={<PdfViewer pdf={redCardPdf} setPageNumber={setPageNumber} pageNumber={pageNumber} />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+    </DraggableProvider>
   )
 }
 

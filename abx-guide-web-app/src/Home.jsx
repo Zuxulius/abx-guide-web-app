@@ -3,8 +3,13 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom"
 import Navbar from "./Navbar";
 import Menu from "./Menu";
+import DraggableChecklist from './DraggableChecklist.jsx'
+import DraggableAllergy from "./DraggableAllergy.jsx";
+import { useDraggable } from "./DraggableContext.jsx"
 
 function Home({ setPageNumber }) {
+
+    const { isChecklistVisible, toggleChecklistVisibility, isAllergyVisible, toggleAllergyVisibility } = useDraggable();
 
     return(
         <div className="homepage-container">
@@ -34,11 +39,13 @@ function Home({ setPageNumber }) {
             <h2>Snabbresurser</h2>
             <hr />
             <div className="quick-resources">
-                <button className="resource-button">Checklista</button>
-                <button className="resource-button">Penicillin-allergi</button>
+                <button className="resource-button" onClick={toggleChecklistVisibility}>Checklista</button>
+                <button className="resource-button" onClick={toggleAllergyVisibility}>Penicillin-allergi</button>
                 <Link className="resource-button" to={"about"}>Källor och länkar</Link>
                 <Link className="resource-button" to={"about"}>Kontakt</Link>
             </div>
+            {isChecklistVisible && <DraggableChecklist />}
+            {isAllergyVisible && <DraggableAllergy />}
             <Footer />
         </div>
     )

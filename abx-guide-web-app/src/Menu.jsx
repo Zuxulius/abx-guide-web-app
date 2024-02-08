@@ -1,7 +1,12 @@
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import DraggableChecklist from './DraggableChecklist.jsx'
+import { useDraggable } from "./DraggableContext.jsx"
+import DraggableAllergy from "./DraggableAllergy.jsx";
 
 function Menu({ setPageNumber }) {
+
+    const { isChecklistVisible, toggleChecklistVisibility, isAllergyVisible, toggleAllergyVisibility } = useDraggable();
 
     return (
         <div className="popup-menu">
@@ -25,10 +30,12 @@ function Menu({ setPageNumber }) {
             Sepsis med okänt fokus /<br />Bukinfektion/<br /> Pneumoni /<br /> Akut bakteriell meningit (ABM)
             </Link>
             <h3>Snabbresurser</h3>
-            <button className="resource-button" >Checklista</button>
-            <button className="resource-button" >Penicillin-allergi</button>
+            <button className="resource-button" onClick={toggleChecklistVisibility}>Checklista</button>
+            <button className="resource-button" onClick={toggleAllergyVisibility}>Penicillin-allergi</button>
             <Link to={"/about"} className="resource-button">Källor och länkar</Link>
             <Link to={"/about"} className="resource-button">Kontakt</Link>
+            {isChecklistVisible && <DraggableChecklist />}
+            {isAllergyVisible && <DraggableAllergy />}
         </div>
     )
 }

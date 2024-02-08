@@ -4,6 +4,9 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import Navbar from './Navbar';
 import Menu from './Menu';
+import DraggableChecklist from './DraggableChecklist.jsx'
+import DraggableAllergy from "./DraggableAllergy.jsx";
+import { useDraggable } from "./DraggableContext.jsx"
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -14,6 +17,7 @@ function PdfViewer({ pdf, pageNumber, setPageNumber }) {
     const [numPages, setNumPages] = useState(null);
     const [pageWidth, setPageWidth] = useState(window.innerWidth * 0.7);
     const [zoomLevel, setZoomLevel] = useState(1);
+    const { isChecklistVisible, toggleChecklistVisibility, isAllergyVisible, toggleAllergyVisibility } = useDraggable();
 
     useEffect(() => {
         setFile(pdf); // Update the file state whenever the file changes
@@ -74,6 +78,8 @@ function PdfViewer({ pdf, pageNumber, setPageNumber }) {
                     ))}
         </Document>
             </div>
+        {isChecklistVisible && <DraggableChecklist />}
+        {isAllergyVisible && <DraggableAllergy />}
         </div>
     )
 }
