@@ -1,12 +1,10 @@
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
-import DraggableChecklist from './DraggableChecklist.jsx'
 import { useDraggable } from "./DraggableContext.jsx"
-import DraggableAllergy from "./DraggableAllergy.jsx";
 
 function Menu({ setPageNumber }) {
 
-    const { isChecklistVisible, toggleChecklistVisibility, isAllergyVisible, toggleAllergyVisibility } = useDraggable();
+    const { toggleChecklistVisibility, toggleAllergyVisibility } = useDraggable();
 
     return (
         <div className="popup-menu">

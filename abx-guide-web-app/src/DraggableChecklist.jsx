@@ -45,7 +45,7 @@ function ChecklistContent() {
             </ol>
         </div>
     );
-};
+}
 
 function DraggableChecklist() {
 

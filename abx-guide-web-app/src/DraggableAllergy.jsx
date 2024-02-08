@@ -8,7 +8,7 @@ function AllergyContent() {
             <header className='drag-handle'><button onClick={toggleAllergyVisibility}>X</button></header>
         </div>
     );
-};
+}
 
 function DraggableAllergy() {
 
