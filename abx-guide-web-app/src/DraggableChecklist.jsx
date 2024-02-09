@@ -53,7 +53,7 @@ function DraggableChecklist() {
   return (
     <Rnd
       default={{
-        x: window.innerWidth - window.innerWidth/4.9,
+        x: window.innerWidth - window.innerWidth/4.8,
         y: window.scrollY+window.innerHeight/2.1,
         width: window.innerWidth/5,
         height: window.innerHeight/2,

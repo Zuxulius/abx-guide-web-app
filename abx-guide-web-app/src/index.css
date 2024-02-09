@@ -62,7 +62,7 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
-  width: 50%;
+  width: 75%;
 }
 
 .green-button-div .green-button {
@@ -93,9 +93,10 @@ footer {
 /* RED BUTTON CSS */
 
 .red-button-div {
-  display: grid;
   padding: 20px;
-  margin-right: 20px;
+  display: flex;
+  width: 75%;
+
 }
 
 .red-button-div .red-button {
@@ -113,7 +114,7 @@ footer {
   border: none;
   border-radius: 10px;
   height: 5vh;
-  width: 50%;
+  width: 100%;
 }
 
 .red-button-div .red-button:hover {
@@ -130,7 +131,7 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   padding: 20px;
-  width: 50%;
+  width: 75%;
 }
 
 .quick-resources .resource-button {
@@ -357,12 +358,14 @@ footer {
   cursor: grab;
 }
 
+/* CHECKLIST */
+
 .checklist-container {
   font-family: Arial, Helvetica, sans-serif;
   color: #1F4D83;
   height: 100%;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .checklist-container button {
@@ -395,11 +398,14 @@ footer {
   margin-top: 10px;
 }
 
+/* ALLERGY */
+
 .allergy-container {
   font-family: Arial, Helvetica, sans-serif;
   color: #1F4D83;
+  height: 100%;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .allergy-container button {
@@ -424,9 +430,40 @@ footer {
   top: 0;
 }
 
-.allergy-container h3{
+.allergy-container {
   text-align: center;
 }
+
+.allergy-container h4 {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.allergy-lists {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin: 5px;
+}
+
+.allergy-lists div {
+  border: solid 1px #1F4D83;
+}
+
+.allergy-lists li {
+  text-align: start;
+  margin-top: 2px;
+}
+
+.allergy-lists p {
+  text-align: start;
+}
+
+/* ABOUT CSS */
+/* ABOUT CSS */
+/* ABOUT CSS */
 
 .about {
   display: flex;
