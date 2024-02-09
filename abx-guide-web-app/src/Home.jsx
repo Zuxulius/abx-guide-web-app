@@ -12,9 +12,10 @@ function Home({ setPageNumber }) {
     const { isChecklistVisible, toggleChecklistVisibility, isAllergyVisible, toggleAllergyVisibility } = useDraggable();
 
     return(
-        <div className="homepage-container">
+        <>
             <Navbar />
             <Menu setPageNumber={setPageNumber}/>
+        <div className="homepage-container">
             <Header />
             <h2>Vanliga samhällsförvärvade infektioner</h2>
             <hr />
@@ -41,13 +42,19 @@ function Home({ setPageNumber }) {
             <div className="quick-resources">
                 <button className="resource-button" onClick={toggleChecklistVisibility}>Checklista</button>
                 <button className="resource-button" onClick={toggleAllergyVisibility}>Penicillin-allergi</button>
-                <Link className="resource-button" to={"about"}>Källor och länkar</Link>
-                <Link className="resource-button" to={"about"}>Kontakt</Link>
+                <Link className="resource-button" to={"about"}
+                target="_blank" rel="noopener noreferrer"
+                >Källor och länkar</Link>
+
+                <Link className="resource-button" to={"about"}
+                target="_blank" rel="noopener noreferrer"
+                >Kontakt</Link>
             </div>
             {isChecklistVisible && <DraggableChecklist />}
             {isAllergyVisible && <DraggableAllergy />}
             <Footer />
         </div>
+    </>
     )
 }
 

@@ -15,21 +15,23 @@ function DraggableAllergy() {
   return (
     <Rnd
       default={{
-        x: window.innerWidth/2.5,
-        y: window.scrollY+100,
-        width: window.innerWidth/2,
-        height: window.innerHeight/2,
+        x: window.innerWidth - window.innerWidth/4.9,
+        y: window.scrollY+window.innerHeight/5,
+        width: window.innerWidth/5,
+        height: window.innerHeight/4,
       }}
+      style={{position: "fixed"}}
+      disableDragging="true"
       minWidth={100}
       minHeight={100}
       bounds="window"
       enableResizing={{
         top: true,
-        right: true,
+        right: false,
         bottom: true,
         left: true,
-        topRight: true,
-        bottomRight: true,
+        topRight: false,
+        bottomRight: false,
         bottomLeft: true,
         topLeft: true,
       }}

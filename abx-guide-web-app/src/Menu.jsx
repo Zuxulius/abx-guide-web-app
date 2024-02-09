@@ -30,8 +30,12 @@ function Menu({ setPageNumber }) {
             <h3>Snabbresurser</h3>
             <button className="resource-button" onClick={toggleChecklistVisibility}>Checklista</button>
             <button className="resource-button" onClick={toggleAllergyVisibility}>Penicillin-allergi</button>
-            <Link to={"/about"} className="resource-button">Källor och länkar</Link>
-            <Link to={"/about"} className="resource-button">Kontakt</Link>
+            <Link to={"/about"}
+            target="_blank" rel="noopener noreferrer"
+            className="resource-button">Källor och länkar</Link>
+            <Link to={"/about"}
+            target="_blank" rel="noopener noreferrer"
+             className="resource-button">Kontakt</Link>
         </div>
     )
 }
