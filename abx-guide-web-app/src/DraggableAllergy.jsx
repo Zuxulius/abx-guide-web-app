@@ -68,10 +68,10 @@ function DraggableAllergy() {
   return (
     <Rnd
       default={{
-        x: window.innerWidth - window.innerWidth/2.45,
-        y: window.scrollY+window.innerHeight/5,
-        width: window.innerWidth/2.5,
-        height: window.innerHeight/4,
+        x: window.innerWidth - window.innerWidth/1.95,
+        y: window.scrollY+window.innerHeight/100,
+        width: window.innerWidth/2,
+        height: window.innerHeight/2.1,
       }}
       style={{position: "fixed"}}
       disableDragging="true"
