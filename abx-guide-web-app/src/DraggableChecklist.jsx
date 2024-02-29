@@ -56,7 +56,7 @@ function DraggableChecklist() {
         x: window.innerWidth - window.innerWidth/1.95,
         y: window.scrollY+window.innerHeight/2,
         width: window.innerWidth/2,
-        height: window.innerHeight/2,
+        height: window.innerHeight/2.1,
       }}
       style={{position: "fixed"}}
       disableDragging="true"
