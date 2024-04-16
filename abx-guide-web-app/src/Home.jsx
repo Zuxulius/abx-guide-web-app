@@ -17,10 +17,13 @@ function Home({ setPageNumber }) {
             <Menu setPageNumber={setPageNumber}/>
         <div className="homepage-container">
             <Header />
-            <h2>Vanliga samhällsförvärvade infektioner</h2>
+{/*             <h2>Vanliga samhällsförvärvade infektioner</h2> */}
             <hr />
             <div className="green-button-div">
-                <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(2)}>
+                <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(1)}>
+                    Vanliga samhällsförvärvade infektioner
+                </Link>
+                {/* <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(2)}>
                 Urosepsis / Pyelonefrit / Nedre afebril UVI
                 </Link>
                 <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(3)}>
@@ -28,13 +31,16 @@ function Home({ setPageNumber }) {
                 </Link>
                 <Link className="green-button" to={"pdf-viewer-green"} onClick={() => setPageNumber(4)}>
                 Övriga
-                </Link>
+                </Link> */}
             </div>
-            <h2>Intensivvårdskrävande infektioner</h2>
+{/*             <h2>Intensivvårdskrävande infektioner</h2> */}
             <hr />
             <div className="red-button-div">
-                <Link className="red-button" to={"pdf-viewer-red"} onClick={() => setPageNumber(2)}>
+                {/* <Link className="red-button" to={"pdf-viewer-red"} onClick={() => setPageNumber(2)}>
                 Sepsis med okänt fokus / Bukinfektion / Pneumoni / Akut bakteriell meningit (ABM)
+                </Link> */}
+                <Link className="red-button" to={"pdf-viewer-red"} onClick={() => setPageNumber(1)}>
+                    Intensivvårdskrävande infektioner
                 </Link>
             </div>
             <h2>Snabbresurser</h2>
@@ -42,13 +48,13 @@ function Home({ setPageNumber }) {
             <div className="quick-resources">
                 <button className="resource-button" onClick={toggleChecklistVisibility}>Checklista</button>
                 <button className="resource-button" onClick={toggleAllergyVisibility}>Penicillin-allergi</button>
-                <Link className="resource-button" to={"about"}
+{/*                 <Link className="resource-button" to={"about"}
                 target="_blank" rel="noopener noreferrer"
                 >Källor och länkar</Link>
 
                 <Link className="resource-button" to={"about"}
                 target="_blank" rel="noopener noreferrer"
-                >Kontakt</Link>
+                >Kontakt</Link> */}
             </div>
             {isChecklistVisible && <DraggableChecklist />}
             {isAllergyVisible && <DraggableAllergy />}

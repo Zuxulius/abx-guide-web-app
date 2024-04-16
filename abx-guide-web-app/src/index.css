@@ -33,6 +33,7 @@ header {
   align-items: center;
   color: whitesmoke;
   padding-top: 10px;
+  text-align: center;
 }
 
 /* FOOTER CSS */
@@ -47,7 +48,7 @@ footer {
   justify-content: center;
   align-items: center;
   color: whitesmoke;
-  margin-top: 20px;
+  margin-top: 50vh;
   width: 100%;
   position: relative;
   bottom: 0;
@@ -58,9 +59,10 @@ footer {
 /* GREEN BUTTON CSS */
 
 .green-button-div {
-  display: grid;
+/*   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 20px; */
+  display: flex;
   padding: 20px;
   width: 75%;
 }
@@ -69,6 +71,7 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   display: flex;
+  flex-basis: 100%;
   justify-content: center;
   align-items: center;
   cursor: pointer;
